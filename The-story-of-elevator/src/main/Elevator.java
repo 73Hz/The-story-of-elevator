@@ -63,8 +63,12 @@ public class Elevator {
             for (; ; nowPosition += change) {
                 int sum = 0;
                 for (int i = nowPosition; i >= 0 && i <= floorCnt; i += change) {
-                    if (userStartPoint[nowPosition][i] != 0) {
+                    if (userStartPoint[nowPosition][i] != 0) {//在nowPosotion层上客，去往i层
                         sum += userStartPoint[nowPosition][i];
+                        if(up)
+                            endPosition=max(endPosition,i);
+                        else
+                            endPosition=min(endPosition,i);
                         userEndPoint[i] += userStartPoint[nowPosition][i];
                         userStartCnt -= userStartPoint[nowPosition][i];
                         userStartPoint[nowPosition][i] = 0;
@@ -85,7 +89,7 @@ public class Elevator {
             }
             up = !up;
             System.out.println("电梯改变运行方向\n\n\n");
-            sc.nextLine();
+            //sc.nextLine();
         }
     }
 
