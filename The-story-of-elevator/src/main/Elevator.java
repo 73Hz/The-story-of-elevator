@@ -50,7 +50,7 @@ public class Elevator {
     public void run() {
         Scanner sc = new Scanner(System.in);
         while (userEndCnt != 0 || userStartCnt != 0) {
-            System.out.println("endCnt = " + userEndCnt + "   startCnt = " + userStartCnt);
+            //System.out.println("endCnt = " + userEndCnt + "   startCnt = " + userStartCnt);
             //确定终点
             endPosition = findEndPosition();
             //System.out.println("endPosition =" + endPosition + "   up=" + up);
@@ -61,6 +61,7 @@ public class Elevator {
             else
                 change = -1;
             for (; ; nowPosition += change) {
+                System.out.print("电梯现在在第"+nowPosition+"层:");
                 int sum = 0;
                 for (int i = nowPosition; i >= 0 && i <= floorCnt; i += change) {
                     if (userStartPoint[nowPosition][i] != 0) {//在nowPosotion层上客，去往i层
@@ -75,20 +76,22 @@ public class Elevator {
                     }
                 }
                 if (sum != 0) {
-                    System.out.println("在第 " + nowPosition + " 楼层上客 " + sum + " 人");
+                    System.out.print("上客 " + sum + " 人   ");
                     userEndCnt += sum;
                 }
                 if (userEndPoint[nowPosition] != 0) {
-                    System.out.println("在第 " + nowPosition + " 楼层下客 " + userEndPoint[nowPosition] + " 人");
+                    System.out.print("下客 " + userEndPoint[nowPosition] + " 人   ");
                     userEndCnt -= userEndPoint[nowPosition];
                     userEndPoint[nowPosition] = 0;
                 }
                 if (nowPosition == endPosition)
-
                     break;
+                System.out.println();
+                TimeStop.stop(1);
             }
             up = !up;
             System.out.println("电梯改变运行方向\n\n\n");
+            TimeStop.stop(1);
             //sc.nextLine();
         }
     }
@@ -117,7 +120,7 @@ public class Elevator {
                         if (userStartPoint[i][t] != 0)
                             temp = min(temp, i);
         }
-        System.out.println("now = "+nowPosition+"   floorCnt = " + floorCnt+"   temp = " + temp+"   up="+up);
+        //System.out.println("now = "+nowPosition+"   floorCnt = " + floorCnt+"   temp = " + temp+"   up="+up);
         return temp;
     }
 }

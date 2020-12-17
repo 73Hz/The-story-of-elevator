@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="dd6d06b9-9242-4516-9158-e7c33f15e4e7" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+    <list default="true" id="dd6d06b9-9242-4516-9158-e7c33f15e4e7" name="Default Changelist" comment="add TimeStop class">
+      <change afterPath="$PROJECT_DIR$/src/main/TimeStop.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/The-story-of-elevator/main/Elevator.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/The-story-of-elevator/main/Elevator.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/The-story-of-elevator/main/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/The-story-of-elevator/main/Main.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/Elevator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Elevator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Main.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -90,7 +91,9 @@
       <workItem from="1607609275343" duration="1319000" />
       <workItem from="1607610619398" duration="296000" />
       <workItem from="1607610987039" duration="2660000" />
-      <workItem from="1607614197067" duration="210000" />
+      <workItem from="1607614197067" duration="675000" />
+      <workItem from="1607772852506" duration="1778000" />
+      <workItem from="1608214583540" duration="3975000" />
     </task>
     <servers />
   </component>
@@ -102,10 +105,16 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="add TimeStop class" />
+    <option name="LAST_COMMIT_MESSAGE" value="add TimeStop class" />
   </component>
 </project>
